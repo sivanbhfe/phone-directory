@@ -1,0 +1,25 @@
+button{
+    height:40px;
+    width:80px;
+    background-color: rgb(90,200,90);
+    color: white;
+    font-size: 16px;
+    font-family: calibri,'cursive';
+    text-transform:uppercase;
+    font-weight:bolder;
+    display:inline-block;
+    margin-top:20px;
+}
+
+#phone{
+     margin-left:200px;
+    
+}
+span{
+    margin-top:20px;
+    display:inline-block;
+    font-weight:bolder;
+    text-transform:uppercase;
+    font-family:'Times New Roman', Times, serif;
+    background-color: #ccc;
+}

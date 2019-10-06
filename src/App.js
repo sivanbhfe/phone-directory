@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import './App.css';
 
 function App() {
 
@@ -9,8 +10,8 @@ function App() {
         
      <button>Add</button>
      <div>
-       <span>Name:</span><br></br>
-       <span>Phone:</span>
+       <span id="name">Name</span>
+       <span id="phone">Phone</span>
      </div>
      </div>
   );
