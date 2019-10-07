@@ -20,12 +20,25 @@ span{
 
 .grid-container{
 	display:grid;
+	justify-items: left;
+	width:60%
 }
 .name {
   grid-column-start: 1;
   grid-column-end: 1;
+  width:33%
 }
 .phone {
   grid-column-start: 2;
   grid-column-end: 2;
+  width:33%
 }
+.deleteButton {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  margin-top:0px;
+  background-color:rgb(255,20,80);
+  width:33%
+}
+
+	

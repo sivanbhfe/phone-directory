@@ -25,6 +25,7 @@ class App extends Component {
      <div className="grid-container">
        <span className="grid-item" className="name">Name</span>
        <span className="grid-item" className="phone">Phone</span>
+	   <span className="grid-item"></span>
 	   </div>
 	   {
 		   subscribers.map(sub=>
@@ -32,6 +33,7 @@ class App extends Component {
 		    <div key = {sub.id} className="grid-container">
        <span className="grid-item" className="name">{sub.name}</span>
        <span className="grid-item" className="phone">{sub.phone}</span>
+	   <button className="grid-item" className="deleteButton">Delete</button>
 	   </div>
 
 		   )})
