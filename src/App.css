@@ -11,15 +11,21 @@ button{
     margin-top:20px;
 }
 
-#phone{
-     margin-left:200px;
-    
-}
 span{
-    margin-top:20px;
-    display:inline-block;
     font-weight:bolder;
     text-transform:uppercase;
     font-family:'Times New Roman', Times, serif;
-    background-color: #ccc;
+
+}
+
+.grid-container{
+	display:grid;
+}
+.name {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+.phone {
+  grid-column-start: 2;
+  grid-column-end: 2;
 }
