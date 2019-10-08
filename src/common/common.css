@@ -1,7 +1,6 @@
 button{
-    height:40px;
+	height:40px;
     width:80px;
-    background-color: rgb(90,200,90);
     color: white;
     font-size: 16px;
     font-family: calibri,'cursive';
@@ -9,6 +8,15 @@ button{
     font-weight:bolder;
     display:inline-block;
     margin-top:20px;
+}
+
+.addButton{
+background-color: rgb(90,200,90);
+}
+
+.backButton{
+    background-color: rgb(200,200,200);
+	color:black;
 }
 
 span{
