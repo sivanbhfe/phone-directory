@@ -3,34 +3,38 @@ import Header from './Header';
 import './App.css';
 
 class App extends Component {
-	clickHandler(message){
-		alert(message);
+
+constructor(){
+	super();
+	this.state ={
+		subscribersListToShow : []
 	}
+}
 	render (){
-		let subscribers = [
-	{
-		id:1,
-	name:'Siva',
-	phone:'8888888888'
-	},
-	{
-		id:2,
-	name:'Balan',
-	phone:'9999999999'
-	}
-	];
+		// let subscribers = [
+	// {
+		// id:1,
+	// name:'Siva',
+	// phone:'8888888888'
+	// },
+	// {
+		// id:2,
+	// name:'Balan',
+	// phone:'9999999999'
+	// }
+	// ];
 		return (
 		<div className="component-container">
         <Header heading="Phone Directory"/>
       <div className="component-body-container">  
-     <button>Add</button>
+     <button className="addButton">Add</button>
      <div className="grid-container">
        <span className="grid-item" className="name">Name</span>
        <span className="grid-item" className="phone">Phone</span>
 	   <span className="grid-item dummy">Delete</span>
 	   </div>
 	   {
-		   subscribers.map(sub=>
+		   this.state.subscribersListToShow.map(sub=>
 		   {return (
 		    <div key = {sub.id} className="grid-container">
        <span className="grid-item" className="name">{sub.name}</span>
