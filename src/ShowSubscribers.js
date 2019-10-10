@@ -1,16 +1,35 @@
 import React, {Component} from 'react';
 import Header from './Header';
-import './App.css';
+import './ShowSubscribers.css';
 
-class App extends Component {
+class ShowSubscribers extends Component {
 
 constructor(){
 	super();
 	this.state ={
 		subscribersListToShow : []
 	}
+	console.log("Constructor called")
+}
+
+clickHandler(x){
+	console.log(x);
+}
+
+componentDidMount(){
+	console.log("Component Did mount called")
+	let newSubscriber ={
+		id:1,
+		name: "Sivabalan",
+		phone: "9841728059"
+	};
+	
+	let subscribersList = this.state.subscribersListToShow;
+	subscribersList.push(newSubscriber);
+	this.setState({subscribersListToShow: subscribersList});
 }
 	render (){
+		console.log("Render method called")
 		// let subscribers = [
 	// {
 		// id:1,
@@ -34,7 +53,7 @@ constructor(){
 	   <span className="grid-item dummy">Delete</span>
 	   </div>
 	   {
-		   this.state.subscribersListToShow.map(sub=>
+		   this.props.subscribersList.map(sub=>
 		   {return (
 		    <div key = {sub.id} className="grid-container">
        <span className="grid-item" className="name">{sub.name}</span>
@@ -58,4 +77,4 @@ constructor(){
 //     );
 //   }
 // }
-export default App;
+export default ShowSubscribers;
