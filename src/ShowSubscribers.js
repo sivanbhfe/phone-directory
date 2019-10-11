@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from './Header';
 import './ShowSubscribers.css';
-
+import {Link} from 'react-router-dom';
 class ShowSubscribers extends Component {
 
 constructor(){
@@ -46,7 +46,7 @@ componentDidMount(){
 		<div className="component-container">
         <Header heading="Phone Directory"/>
       <div className="component-body-container">  
-     <button className="addButton">Add</button>
+     <Link to="/add"><button className="addButton">Add</button></Link>
      <div className="grid-container">
        <span className="grid-item" className="name">Name</span>
        <span className="grid-item" className="phone">Phone</span>
