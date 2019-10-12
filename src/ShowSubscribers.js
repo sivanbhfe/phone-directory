@@ -12,8 +12,8 @@ constructor(){
 	console.log("Constructor called")
 }
 
-clickHandler(x){
-	console.log(x);
+onDeleteClick = (subscriberId) => {
+	this.props.deleteSubscriberHandler(subscriberId);
 }
 
 componentDidMount(){
@@ -42,6 +42,8 @@ componentDidMount(){
 	// phone:'9999999999'
 	// }
 	// ];
+	
+	
 		return (
 		<div className="component-container">
         <Header heading="Phone Directory"/>
@@ -58,7 +60,7 @@ componentDidMount(){
 		    <div key = {sub.id} className="grid-container">
        <span className="grid-item" className="name">{sub.name}</span>
        <span className="grid-item" className="phone">{sub.phone}</span>
-	   <button className="grid-item" className="deleteButton" onClick={this.clickHandler.bind(this,"Delete handler clicked")}>Delete</button>
+	   <button className="grid-item" className="deleteButton" onClick={this.onDeleteClick.bind(this,sub.id)}>Delete</button>
 	   </div>
 
 		   )})
